@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_my_design_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_my_design" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1700000001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="138"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject type="logic" fp_name="/tb_my_design/CLK">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_my_design/DUT/DUT/FIR1/CLK">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_my_design/DUT/DUT/FIR1/RST">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_my_design/DUT/DUT/FIR1/X">
+      <obj_property name="ElementShortName">X[7:0]</obj_property>
+      <obj_property name="ObjectShortName">X[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_FIXED</obj_property>
+      <obj_property name="AnalogYRangeMin">7.237000</obj_property>
+      <obj_property name="AnalogYRRangeMax">7.487000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_my_design/DUT/DUT/FIR1/Y">
+      <obj_property name="ElementShortName">Y[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Y[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_my_design/DUT/DUT/CHCK/CLK">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_my_design/DUT/DUT/CHCK/RST">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_my_design/DUT/DUT/CHCK/Addr">
+      <obj_property name="ElementShortName">Addr</obj_property>
+      <obj_property name="ObjectShortName">Addr</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_my_design/DUT/DUT/CHCK/Y0">
+      <obj_property name="ElementShortName">Y0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Y0[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_my_design/DUT/DUT/CHCK/Y1">
+      <obj_property name="ElementShortName">Y1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Y1[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_my_design/DUT/DUT/CHCK/ERR">
+      <obj_property name="ElementShortName">ERR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ERR[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_my_design/DUT/DUT/CHCK/FLAG">
+      <obj_property name="ElementShortName">FLAG</obj_property>
+      <obj_property name="ObjectShortName">FLAG</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_my_design/DUT/DUT/ROM/X">
+      <obj_property name="ElementShortName">X[7:0]</obj_property>
+      <obj_property name="ObjectShortName">X[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_my_design/SO">
+      <obj_property name="ElementShortName">SO</obj_property>
+      <obj_property name="ObjectShortName">SO</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_my_design/INJ">
+      <obj_property name="ElementShortName">INJ</obj_property>
+      <obj_property name="ObjectShortName">INJ</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_my_design/DUT/BAUD_COUNT">
+      <obj_property name="ElementShortName">BAUD_COUNT</obj_property>
+      <obj_property name="ObjectShortName">BAUD_COUNT</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_my_design/DUT/BAUD_ENA">
+      <obj_property name="ElementShortName">BAUD_ENA</obj_property>
+      <obj_property name="ObjectShortName">BAUD_ENA</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_my_design/DUT/B_WRITE">
+      <obj_property name="ElementShortName">B_WRITE</obj_property>
+      <obj_property name="ObjectShortName">B_WRITE</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_my_design/DUT/FLAG1">
+      <obj_property name="ElementShortName">FLAG1</obj_property>
+      <obj_property name="ObjectShortName">FLAG1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_my_design/DUT/FLAG2">
+      <obj_property name="ElementShortName">FLAG2</obj_property>
+      <obj_property name="ObjectShortName">FLAG2</obj_property>
+   </wvobject>
+</wave_config>
