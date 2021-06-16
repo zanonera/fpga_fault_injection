@@ -14,7 +14,9 @@ Other addition was a tcl script based project creation and the instantiation of 
 
 ## Synthesis
 * To create the project and run all process until the bitstream generation, just run the following command
-		vivado -mode tcl -source all.tcl
+```bash
+        vivado -mode tcl -source all.tcl
+```
 
 ## Tools and harware
 * Vivado Design Suite (It was used 2018.3)
@@ -23,4 +25,4 @@ Other addition was a tcl script based project creation and the instantiation of 
 * FT2232H to provide dual serial UART, used in tests
 
 ## License
-This project is licensed under GPLv3 - see the [LICENSE](https://github.com/LauraRgz/FPGA-Fault-Injection-Tutorial/blob/main/LICENSE.md) file for details.
+This project is licensed under GPLv3 - see the [LICENSE](https://github.com/zanonera/fpga_fault_injection/blob/main/LICENSE) file for details.
