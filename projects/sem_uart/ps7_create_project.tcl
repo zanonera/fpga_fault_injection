@@ -14,16 +14,16 @@ regenerate_bd_layout
 save_bd_design
 
 make_wrapper -files [get_files ./sem_uart_project/sem_uart_project.srcs/sources_1/bd/system/system.bd] -top
-add_files -norecurse ./final_project/final_project.srcs/sources_1/bd/system/hdl/system_wrapper.v
+add_files -norecurse ./$project_name/$project_name.srcs/sources_1/bd/system/hdl/system_wrapper.v
 
 set dut_files [list $root_dir/hdl/code/checker.vhd \
-               list $root_dir/hdl/code/fir10.vhd \
-               list $root_dir/hdl/code/firdff.vhd \
-               list $root_dir/hdl/code/inputROM.vhd \
-               list $root_dir/hdl/code/my_design.vhd \
-               list $root_dir/hdl/code/system_top.vhd \
-               list $root_dir/hdl/code/top.vhd \
-               list $root_dir/hdl/code/uart_tx6.vhd]
+                    $root_dir/hdl/code/fir10.vhd \
+                    $root_dir/hdl/code/firdff.vhd \
+                    $root_dir/hdl/code/inputROM.vhd \
+                    $root_dir/hdl/code/my_design.vhd \
+                    $root_dir/hdl/code/system_top.v \
+                    $root_dir/hdl/code/top.vhd \
+                    $root_dir/hdl/code/uart_tx6.vhd]
 
 set_property target_language VHDL [current_project]
 
