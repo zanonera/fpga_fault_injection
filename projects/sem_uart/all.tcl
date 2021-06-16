@@ -4,11 +4,11 @@ launch_runs synth_1 -jobs 4
 
 wait_on_run synth_1
 
-#opt_design 
-place_design 
-route_design
+open_run synth_1
 
-write_bitstream
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_run impl_1
 
 close_project
 
