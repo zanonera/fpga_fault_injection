@@ -1,5 +1,5 @@
 set root_dir [file normalize  ./]
-set constraints_dir $root_dir/constraints
+set constraints_dir $root_dir/data/constraints
 
 # Create MicroBlaze Vivado IPI project
 source data/bd.tcl
