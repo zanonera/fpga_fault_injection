@@ -1,0 +1,4 @@
+[submodule "projects/sem_rv/picorv32-tmr"]
+	path = projects/sem_rv/picorv32-tmr
+	url = git@github.com:zanonera/picorv32-tmr.git
+	branch = dev
