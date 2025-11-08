@@ -33,6 +33,8 @@ output dut_uart_txd_o);
 wire system_clk;
 wire system_rstn;
 wire sem_sts_injection;
+wire byte_en;
+wire [7:0] soc_data_out;
 
 sem_bd_wrapper sem_bd_wrapper_i
    (.DDR_addr(DDR_addr),
@@ -63,11 +65,20 @@ sem_bd_wrapper sem_bd_wrapper_i
     .axi_resetn(system_rstn)
     );
     
+ system tiny_soc_i(
+	.clk(system_clk),
+	.resetn(system_rstn),
+	.trap(),
+	.out_byte(soc_data_out),
+	.out_byte_en(byte_en)
+);
+    
 my_design my_design_i(
     .clk(system_clk),                         // 100MHz FPGA Clock
 	.rst(~system_rstn),                       // Reset
-	.status_injection(sem_sts_injection),     // Status Injection LED
-    .S_OUT(dut_uart_txd_o)                    // DUT Serial Output
+	.uart_enable(byte_en),
+    .uart_data_in(soc_data_out),
+    .uart_data_out(dut_uart_txd_o)            // DUT Serial Output
     ); 
 
 endmodule

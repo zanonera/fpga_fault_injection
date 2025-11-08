@@ -17,20 +17,23 @@ save_bd_design
 make_wrapper -top -files [get_files $proj_dir/${project_name}.srcs/sources_1/bd/sem_bd/sem_bd.bd]
 import_files -force -norecurse -fileset sources_1 $proj_dir/${project_name}.srcs/sources_1/bd/sem_bd/hdl/sem_bd_wrapper.v
 
-set dut_files [list $root_dir/hdl/code/checker.vhd \
-                    $root_dir/hdl/code/fir10.vhd \
-                    $root_dir/hdl/code/firdff.vhd \
-                    $root_dir/hdl/code/inputROM.vhd \
-                    $root_dir/hdl/code/my_design.vhd \
+set dut_files [list $root_dir/hdl/code/my_design.vhd \
                     $root_dir/hdl/code/system_top.v \
-                    $root_dir/hdl/code/top.vhd \
-                    $root_dir/hdl/code/uart_tx6.vhd]
+                    $root_dir/hdl/code/uart_tx6.vhd \
+                    $root_dir/picorv32-tmr/word_voter.v \
+                    $root_dir/picorv32-tmr/picorv32.v \
+                    $root_dir/picorv32-tmr/picorv32_tmr.v \
+                    $root_dir/picorv32-tmr/scripts/vivado/system.v]
 
 set_property target_language VHDL [current_project]
 
 foreach element $dut_files {
     add_files -norecurse $element
 }
+
+set_property file_type SystemVerilog [get_files $root_dir/picorv32-tmr/picorv32_tmr.v]
+set_property file_type SystemVerilog [get_files $root_dir/picorv32-tmr/word_voter.v]
+set_property file_type SystemVerilog [get_files $root_dir/picorv32-tmr/scripts/vivado/system.v]
 
 add_files -fileset constrs_1 $constraints_dir
 
