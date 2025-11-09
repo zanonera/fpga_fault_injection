@@ -5,11 +5,21 @@ set_property BITSTREAM.GENERAL.COMPRESS false [current_design]
 # Generate EBD File
 set_property BITSTREAM.SEU.ESSENTIALBITS yes [current_design]
 
+##OutrosCores
+create_pblock OutrosCores
+add_cells_to_pblock [get_pblocks OutrosCores] [get_cells -quiet [list {tiny_soc_i/picorv32_core/genblk1[1].core_u0}]]
+add_cells_to_pblock [get_pblocks OutrosCores] [get_cells -quiet [list {tiny_soc_i/picorv32_core/genblk1[2].core_u0}]]
+add_cells_to_pblock [get_pblocks OutrosCores] [get_cells -quiet [list {tiny_soc_i/picorv32_core/voter_*}]]
+resize_pblock OutrosCores -add {SLICE_X50Y52:SLICE_X105Y97 DSP48_X3Y22:DSP48_X4Y37 RAMB18_X3Y22:RAMB18_X4Y37 RAMB36_X3Y11:RAMB36_X4Y18} -locs keep_all -replace
+set_property EXCLUDE_PLACEMENT 1 [get_pblocks OutrosCores]
+
 ## Place My DUT
 create_pblock MY_DUT
 add_cells_to_pblock [get_pblocks MY_DUT] [get_cells -quiet [list {tiny_soc_i/picorv32_core/genblk1[0].core_u0}]]
-resize_pblock [get_pblocks MY_DUT] -add {SLICE_X54Y66:SLICE_X75Y42}
-resize_pblock MY_DUT -add SLICE_X54Y42:SLICE_X71Y66 -remove SLICE_X54Y42:SLICE_X75Y66 -locs keep_all
+#resize_pblock [get_pblocks MY_DUT] -add {SLICE_X54Y66:SLICE_X75Y42}
+#resize_pblock MY_DUT -add SLICE_X54Y42:SLICE_X71Y66 -remove SLICE_X54Y42:SLICE_X75Y66 -locs keep_all
+resize_pblock MY_DUT -add {SLICE_X92Y10:SLICE_X109Y34}
+#resize_pblock MY_DUT -add {SLICE_X92Y10:SLICE_X109Y34 DSP48_X3Y4:DSP48_X4Y13 RAMB18_X5Y4:RAMB18_X5Y13 RAMB36_X5Y2:RAMB36_X5Y6} -remove {SLICE_X92Y10:SLICE_X111Y34 DSP48_X3Y4:DSP48_X4Y13 RAMB18_X5Y4:RAMB18_X5Y13 RAMB36_X5Y2:RAMB36_X5Y6} -locs keep_all
 set_property EXCLUDE_PLACEMENT 1 [get_pblocks MY_DUT]
 
 ## Place My UART
