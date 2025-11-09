@@ -5,12 +5,11 @@ set_property BITSTREAM.GENERAL.COMPRESS false [current_design]
 # Generate EBD File
 set_property BITSTREAM.SEU.ESSENTIALBITS yes [current_design]
 
-## Do not use DSP Blocks for the DCT
-
 ## Place My DUT
 create_pblock MY_DUT
 add_cells_to_pblock [get_pblocks MY_DUT] [get_cells -quiet [list {tiny_soc_i/picorv32_core/genblk1[0].core_u0}]]
 resize_pblock [get_pblocks MY_DUT] -add {SLICE_X54Y66:SLICE_X75Y42}
+resize_pblock MY_DUT -add SLICE_X54Y42:SLICE_X71Y66 -remove SLICE_X54Y42:SLICE_X75Y66 -locs keep_all
 set_property EXCLUDE_PLACEMENT 1 [get_pblocks MY_DUT]
 
 ## Place My UART
