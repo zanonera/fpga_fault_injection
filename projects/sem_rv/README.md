@@ -2,14 +2,11 @@
 Xilinx Series 7 Fault Injection tests using SEM IP Core
 
 ## This folder
-This folder contains the tests for FPGA fault injections presented in this [repo](https://github.com/LauraRgz/FPGA-Fault-Injection-Tutorial)
-
-The original work from there was modified to be used in a 7 Series Zynq using an Pynq-Z2 Board.
-
-Other addition was a tcl script based project creation and the instantiation of the SEM IP Core from within the Block Design.
+This folder contains the tests for FPGA fault injections using the [PicoRV32](https://github.com/YosysHQ/picorv32) with Triple Modular Redundancy applied in this [repo](https://github.com/zanonera/picorv32-tmr).
 
 ### Files
 * The modules of the experimental set-up and UART can be found in the hdl folder. This folder contains the source code for synthesis and simulation
+* The TMRed PicoRv32 is a submodule, pointinh to its own repo
 * The constraints folder contains the pin-out, bitstream and position of the design entity configuration. This design has a ILA for debug pupose.
 
 ## Synthesis
